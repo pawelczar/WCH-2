@@ -5,7 +5,7 @@
 	font-size: 1rem;
 }
 
-/* variable */
+
 :root {
 	--bgcolor-header: #f9f8fb;
 	--bgcolor-about: #00b1b0;
@@ -49,7 +49,6 @@
 }
 
 .nav__logo a {
-	/* flex-basis: 5ch; */
 	color: var(--color-dark);
 	font-family: "Pacifico";
 	font-size: clamp(1rem, 5vw, 3.125rem);
@@ -222,6 +221,8 @@
 	margin-left: 65px;
 	
 }
+
+/************* GALLERY *******************/
 
 .gallery{
 	width: 100%;
