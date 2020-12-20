@@ -128,24 +128,18 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 65px;
-	animation: scroll 5s linear 1s infinite normal both;
+	animation: scroll 3s linear 1s infinite normal none;
 }
 
 @keyframes scroll {
 	0% {
 		transform: translate(-50%, 0);
 	}
-	10% {
+	10%{
 		transform: translate(-50%, 25%);
 	}
-	20% {
+	20%{
 		transform: translate(-50%, 0);
-	}
-	89% {
-		transform: translate(-50%, 0);
-	}
-	90% {
-		transform: translate(-50%, 25%);
 	}
 	100% {
 		transform: translate(-50%, 0);
