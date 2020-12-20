@@ -185,14 +185,44 @@
 	align-items: center;
 	padding: 0 var(--margin-main);
 	background: var(--bgcolor-services) no-repeat  85% 50% url(img/services.png);
-	background-size: 60vh;
+	background-size: 50vh;
 }
 
 .list__item{
 	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 700;
 	margin-bottom: 20px;
 	width: 400px;
 	height: 100px;
 	background-color: var(--color-bright);
 	box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.5);
+}
+
+.list__description{
+	flex-basis: 75%;
+}
+
+.list__icon{
+	flex-basis: 25%;
+	border-left: 1px solid #949292;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.list__icon img{
+	width: 47px;
+}
+
+.services__title{
+	font-size: clamp(10px, 7vw, 5.625rem);
+	color: var(--color-bright);
+	margin-left: 65px;
+	
 }
