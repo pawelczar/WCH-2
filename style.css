@@ -303,3 +303,9 @@
 	cursor: pointer;
 	background-color: #95bad1
 }
+
+.subscribe{
+	width: 100%;
+	min-height: 486px;
+	background:right / 50% no-repeat url(img/subscribe.jpg), #fff ;
+}
