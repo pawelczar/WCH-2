@@ -20,6 +20,7 @@
 	--button-shadow: #8b8b8b;
 	font-family: "Pacifico", cursive;
 	font-family: "Raleway", sans-serif;
+	scroll-behavior: smooth;
 }
 .wrapper {
 	margin: 0 auto;
