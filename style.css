@@ -114,6 +114,7 @@
 
 .button--orange {
 	background-color: var(--color-orange-bright);
+	cursor: pointer;
 }
 
 .button--orange:hover {
@@ -225,4 +226,84 @@
 	color: var(--color-bright);
 	margin-left: 65px;
 	
+}
+
+.gallery{
+	width: 100%;
+	background-color: var(--bgcolor-gallery);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.gallery__title{
+	font-size: 5.625rem;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 80px;
+	margin-bottom: 20px;
+}
+
+.gallery__description{
+	width: 60%;
+	margin: 0 auto;
+	font-size: 1.0625rem;
+	font-weight: 200;
+	text-align: center;
+}
+
+.gallery__container{
+	display: grid;
+	width: 80vw;
+	margin: 30px auto 50px auto;
+	grid-gap: 30px;
+	grid-template-areas: "big big big big small small"
+						 "big big big big small2 small2"
+						 "med med med med2 med2 med2"
+						 "med med med med2 med2 med2";
+}
+
+.gallery__container > div {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+	transition: all 0.2s ease-in-out;
+}
+
+.gallery__container > div:hover {
+	transform:scale(1.02);
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gallery__container img{
+	display: block;
+	/* object-fit: cover; */
+	width: 100%;
+}
+.gallery__item--big{
+	grid-area: big;
+}
+
+.gallery__item--med{
+	grid-area: med;
+}
+
+.gallery__item--med2{
+	grid-area: med2;
+}
+
+.gallery__item--small2{
+	grid-area: small2;
+}
+
+.gallery__item--small{
+	grid-area: small;
+}
+
+.button--teal{
+	background-color: #5585A2;
+	margin: 50px auto 134px auto;
+}
+
+.button--teal:hover{
+	cursor: pointer;
+	background-color: #95bad1
 }
