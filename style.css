@@ -16,6 +16,7 @@
 	--color-dark: #262626;
 	--color-bright: #fff;
 	--color-orange-bright: #ff6033;
+	--color-green: #96B92C;
 	--margin-main: max(11%);
 	--button-shadow: #8b8b8b;
 	font-family: "Pacifico", cursive;
@@ -273,6 +274,7 @@
 	display: block;
 	/* object-fit: cover; */
 	width: 100%;
+	height: 100%;
 }
 .gallery__item--big{
 	grid-area: big;
@@ -299,6 +301,8 @@
 	margin: 50px auto 134px auto;
 }
 
+/****************SUBSCRIBE SECTION************************/
+
 .button--teal:hover{
 	cursor: pointer;
 	background-color: #95bad1
@@ -307,5 +311,54 @@
 .subscribe{
 	width: 100%;
 	min-height: 486px;
-	background:right / 50% no-repeat url(img/subscribe.jpg), #fff ;
+	padding: 10%;
+	background:right no-repeat url(img/subscribe.jpg), #fff ;
+}
+
+
+.subscribe__title{
+	font-family: Raleway;
+	font-size: 2.5rem;
+	margin-bottom: 19px;
+	color: var(--color-dark);
+}
+
+.subscribe__descrition{
+	font-family: Raleway;
+	max-width: 50ch;
+	font-size: 1.0625rem;
+	font-weight: 200;
+	line-height: 1.5em;
+	margin-bottom: 30px;
+}
+
+.form__intput{
+	height: 55px;
+	width: 570px;
+	padding: 10px;
+	font-family: Raleway;
+	font-size: 0.9375rem;
+	font-weight: 200;
+	margin-right: 30px;
+	margin-bottom: 10px;
+}
+
+.button--green{
+ 	width: 170px;
+	height: 55px;
+	background-color: var(--color-green);
+
+}
+
+.button--green:hover{
+	background-color: #b0dd29;
+}
+
+.sr-only{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	
 }
