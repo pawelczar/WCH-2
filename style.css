@@ -16,6 +16,7 @@
 	--color-dark: #262626;
 	--color-bright: #fff;
 	--color-orange-bright: #ff6033;
+	--color-red:#F72B3B;
 	--color-green: #96B92C;
 	--margin-main: max(11%);
 	--button-shadow: #8b8b8b;
@@ -360,5 +361,119 @@
 	left: 0;
 	width: 1px;
 	height: 1px;
+	clip: rect(0,0,0,0);
 	
+}
+
+/************** BLOG SECTION *******************/
+.blog{
+	width: 100%;
+	background-color: var(--bgcolor-blog);
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	color: var(--color-bright);
+}
+
+.blog__title{
+	font-family: 'Raleway';
+	font-size: 5.625rem;
+	font-weight: bold;
+
+}
+
+.blog__description{
+	width: 60%;
+	margin-top: 20px;
+	font-size: 1.0625rem;
+	font-weight: 200;
+	line-height:1.5625rem;
+}
+
+.blog__cards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.875rem;
+
+
+}
+
+.card{
+	height: 310px;
+	width: 350px;
+	padding: 5px;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	margin: 15px;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+	transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+	transform: scale(1.03);
+}
+
+.card--smoothie{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.05) 70%, rgba(0, 0, 0, 0.9)), 
+	url(img/blog_smoothie.jpg);
+}
+
+.card--soup	{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.05) 70%, rgba(0, 0, 0, 0.9)), 
+	url(img/blog_soup.jpg);
+}
+
+.card--raspberries{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.05) 70%, rgba(0, 0, 0, 0.9)), 
+	url(img/blog_rapberry.jpg);
+}
+
+.card__date{
+	height: 62px;
+	width: 60px;
+	padding: 3px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius:5px;
+	text-align: center;
+	font-family: 'Raleway';
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 25px;
+	color: var(--color-bright);
+}
+
+.card__date--month{
+	font-size: 1.3125rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.card__header{
+	position: relative;
+	left: 0;
+	top: 70%;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.card__stamp{
+	position: absolute;
+	bottom: 5%;
+	font-size: 0.8125rem;
+	font-weight: 200;
+	
+}
+
+.button--red{
+	margin-top: 50px;
+	background-color: var(--color-red);
 }
