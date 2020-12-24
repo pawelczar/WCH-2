@@ -103,6 +103,7 @@
 .button {
 	height: 55px;
 	width: 200px;
+	cursor: pointer;
 	text-transform: uppercase;
 	border: none;
 	font-family: "Raleway";
@@ -405,7 +406,7 @@
 
 .card{
 	height: 310px;
-	width: 350px;
+	width: 330px;
 	padding: 5px;
 	position: relative;
 	background-position: center;
@@ -476,4 +477,8 @@
 .button--red{
 	margin-top: 50px;
 	background-color: var(--color-red);
+}
+
+.button--red:hover{
+	background-color: #fa4352;
 }
