@@ -13,6 +13,7 @@
 	--bgcolor-gallery: #ffe92f;
 	--bgcolor-subscribe: #ffffff;
 	--bgcolor-blog: #b07cf7;
+	--bgcolor-inputs: rgba(0, 196, 196, 0.5);
 	--color-dark: #262626;
 	--color-bright: #fff;
 	--color-orange-bright: #ff6033;
@@ -481,4 +482,76 @@
 
 .button--red:hover{
 	background-color: #fa4352;
+}
+
+/**************CONTACT*************************/
+
+.contact{
+	background-image: url(img/contact_background.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 5%;
+}
+
+.contact__title{
+	font-family: 'Raleway';
+	font-size: 5.625rem;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-bottom: 22px;
+	text-align: center;
+	
+}
+
+.conctact__description{
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 42px;
+}
+
+.contact__content{
+	display: flex;
+	justify-content:space-around;
+}
+
+.contact__form{
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	margin-right: 10px;
+}
+
+.contact__input{
+	background: var(--bgcolor-inputs);
+	height: 50px;
+	padding: 15px;
+	border: none;
+	margin-bottom: 15px;
+}
+
+.message{
+	height: 250px;
+	resize: none;
+}
+input::placeholder, textarea::placeholder{
+	font-family: 'Raleway';
+	font-size: 0.9375rem;
+	color: var(--color-bright);
+}
+
+.address__header{
+	font-family: 'Raleway';
+	font-size: 1.0625rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+.address__content{
+	text-decoration: none;
+	color: var(--color-dark);
+	font-size: 1.25rem;
+	font-weight: 200;
+	font-style: normal;
 }

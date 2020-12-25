@@ -125,31 +125,33 @@
 				<p class="conctact__description">
 					For new projects, ideas, business or anything you'd like to discuss, contact with me!
 				</p>
-				<form action="#" class="contact__form form">
-					<label class="form__label" for="name">Your name</label>
-					<input class="form__name" type="text" id="name" required>
-					<label class="form__label" for="email">Your email</label>
-					<input class="form__email" type="email" id="email" required>
-					<label class="form__label" for="phone">Your phone number
-					<input class="form__phone" type="tel" id="phone" required></label>
-					<label class="form__label" for="message">Your message</label>
-					<textarea class="form__message" id="message" cols="50" rows="10" required placeholder="Your message...">
-					</textarea>
-				</form>
-				<address class="contact__adress address">
-					<h3 class="address__header street">address</h3>
-					<p class="address__conent">
-						123 City name, Street, City, Country
-					</>
-					<h3 class="adress_header email">email</h3>
-					<a class="address__content" href="mailto:cahee@domain.com">
-						cahee@domain.com
-					</a>
-					<h3 class="adress_header phone">phone</h3>
-					<a class="address__content" href="tel:+0123456789">
-						+012 345 6789
-					</a>
-				</address>
+				<div class="contact__content">
+					<form action="#" class="contact__form">
+						<label class="form__label sr-only" for="name">Your name</label>
+						<input class="contact__input" type="text" id="name" required placeholder="Your name...">
+						<label class="form__label sr-only" for="email">Your email</label>
+						<input class="contact__input" type="email" id="email" required placeholder="Your email...">
+						<label class="form__label sr-only" for="phone">Your phone number</label>
+						<input class="contact__input" type="tel" id="phone" required placeholder="Your phone number...">
+						<label class="form__label sr-only" for="message">Your message</label>
+						<textarea class="contact__input message" id="message" cols="50" rows="10" required placeholder="Your message...">
+						</textarea>
+					</form>
+					<address class="contact__adress address">
+						<h3 class="address__header street">address</h3>
+						<p class="address__content">
+							123 City name, Street, City, Country
+						</>
+						<h3 class="address__header email">email</h3>
+						<a class="address__content" href="mailto:cahee@domain.com">
+							cahee@domain.com
+						</a>
+						<h3 class="address__header phone">phone</h3>
+						<a class="address__content" href="tel:+0123456789">
+							+012 345 6789
+						</a>
+					</address>
+			</div>
 			</section>
 			<footer class="footer">
 				<div class="footer-copyrights"> &copy; 2015 Company. All Rights reserved. </div>
