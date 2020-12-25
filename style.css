@@ -569,3 +569,32 @@ input::placeholder, textarea::placeholder{
 	font-weight: 200;
 	font-style: normal;
 }
+
+/*******************FOOTER**************************/
+.footer{
+	height: 90px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--color-dark);
+	color: #B9B9B9;
+	font-family: 'Raleway';
+	font-size: 1rem;
+	font-weight: 200;
+}
+
+.footer-logo{
+	font-family: 'Pacifico';
+	font-size: 1.5625rem;
+	font-weight: normal;
+}
+
+.footer-madeby{
+	font-size: 0.9375rem;
+}
+
+.footer-madeby span {
+	font-weight: bold;
+	color: var(--color-red);
+}
