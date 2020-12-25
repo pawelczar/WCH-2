@@ -19,7 +19,7 @@
 	--color-orange-bright: #ff6033;
 	--color-red:#F72B3B;
 	--color-green: #96B92C;
-	--margin-main: max(11%);
+	--margin-main: max(10px, 10vw);
 	--button-shadow: #8b8b8b;
 	font-family: "Pacifico", cursive;
 	font-family: "Raleway", sans-serif;
@@ -597,4 +597,25 @@ input::placeholder, textarea::placeholder{
 .footer-madeby span {
 	font-weight: bold;
 	color: var(--color-red);
+}
+
+/*************** MEDIA QUERIES *****************/
+@media screen and (max-width:1440px){
+	.about__info{
+		color: var(--color-dark);
+		text-shadow: 0 0 2px #fff;
+		margin: 0 0 auto;
+	}
+}
+
+@media screen and (max-width:1024px){
+	.about__info{
+		position: relative;
+		color: var(--color-bright);
+		margin: 0 auto;
+		text-shadow: none;
+		right: auto;
+		padding: 10px;
+		background-color: var(--bgcolor-about);
+	}
 }
