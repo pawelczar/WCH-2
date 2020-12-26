@@ -304,12 +304,13 @@
 	margin: 50px auto 134px auto;
 }
 
-/****************SUBSCRIBE SECTION************************/
-
 .button--teal:hover{
 	cursor: pointer;
 	background-color: #95bad1
 }
+
+/****************SUBSCRIBE SECTION************************/
+
 
 .subscribe{
 	width: 100%;
@@ -600,15 +601,7 @@ input::placeholder, textarea::placeholder{
 }
 
 /*************** MEDIA QUERIES *****************/
-@media screen and (max-width:1440px){
-	.about__info{
-		color: var(--color-dark);
-		text-shadow: 0 0 2px #fff;
-		margin: 0 0 auto;
-	}
-}
-
-@media screen and (max-width:1024px){
+@media screen and (max-width:1230px){
 	.about__info{
 		position: relative;
 		color: var(--color-bright);
@@ -616,6 +609,83 @@ input::placeholder, textarea::placeholder{
 		text-shadow: none;
 		right: auto;
 		padding: 10px;
-		background-color: var(--bgcolor-about);
+		background-color: rgba(0, 177, 176, 0.6);
 	}
+}
+
+@media screen and (max-width:685px){
+	.header{
+		padding: max(10px, 5vh);
+		padding-top: 0;
+	}
+
+	.header__nav{
+		height: 100px;
+	}
+	.services {
+		height: auto;
+		flex-direction: column;
+		padding: max(10px, 5vh);
+		background-size: 60%;
+		background-position: center	;
+	}
+	
+	.list__item{
+		width: 60vw;
+		height: 70px;
+	}
+	
+		
+	.services__title{
+		margin-left: 0;
+		order: -1;
+		
+	}
+
+/************* GALLERY ********************/
+
+	.gallery__container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:center;
+	}
+	.gallery__title{
+		padding-top: 40px;
+	}
+
+	.button--teal{
+		margin: 0 auto 40px auto;
+	}
+
+	.gallery__container > div{
+		width: 80%;
+	}
+/*********SUBSCRIBE**********************/
+
+	.subscribe{
+		width: 100%;
+		min-height: 486px;
+		padding: 10%;
+		background:right no-repeat url(img/subscribe.jpg), #fff ;
+	}
+
+	.subscribe__descrition{
+	background-color: rgba(255, 255, 255, 0.6);
+	}
+	
+	.form__intput{
+		width: 100%;
+	}
+
+/**************** CONTACT **************************/
+
+	.contact__content{
+		flex-direction: column;
+	}
+
+	.contact__form{
+		margin: 0 auto;
+		width: 90%;
+	}
+
 }
