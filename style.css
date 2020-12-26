@@ -83,6 +83,29 @@
 	color: var(--color-dark);
 }
 
+
+/*************MOBILE MENU***********************/
+
+
+
+.nav__hamburger {
+	visibility: hidden;
+	background-color: transparent;	
+	width: 35px;
+	height: 23px;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.nav__hamburger > span {
+	background-color: #000;
+	height: 3px;
+	width: 35px;
+}
+
+
 /* HEADER CONTENT */
 
 .header__content {
@@ -614,6 +637,10 @@ input::placeholder, textarea::placeholder{
 }
 
 @media screen and (max-width:685px){
+	.nav__menu{
+		display: none;
+	}
+
 	.header{
 		padding: max(10px, 5vh);
 		padding-top: 0;
