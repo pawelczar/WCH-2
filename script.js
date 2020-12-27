@@ -3,13 +3,16 @@ const navBar = document.querySelector('.nav');
 const menu = document.querySelector('.nav__menu');
 const subscribeForm = document.querySelector('.subscribe__form');
 const header = document.querySelector('.header');
+const menuLinks = document.querySelectorAll('.nav__item > a');
+
+console.log(menuLinks);
 
 const prevSubmit = function (e){
     e.preventDefault();
 }
 
 const activeToggle = function () {
-    this.classList.toggle('active');
+    hamburger.classList.toggle('active');
     menu.classList.toggle('active');
     if(!navBar.classList.contains('active')) {
         navBar.classList.add('active');
@@ -28,4 +31,8 @@ document.addEventListener('scroll', function(){
 
 subscribeForm.addEventListener('submit',prevSubmit);
 hamburger.addEventListener('click', activeToggle);
+
+for( let i = 0; i < menuLinks.length; i++){
+    menuLinks[i].addEventListener('click', activeToggle);
+}
 
