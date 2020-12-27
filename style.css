@@ -616,8 +616,12 @@ input::placeholder, textarea::placeholder{
 	background-color: var(--color-dark);
 	color: #B9B9B9;
 	font-family: 'Raleway';
-	font-size: 1rem;
 	font-weight: 200;
+	text-align: center;
+}
+
+.footer > div {
+	padding: 5px;
 }
 
 .footer-logo{
@@ -626,8 +630,8 @@ input::placeholder, textarea::placeholder{
 	font-weight: normal;
 }
 
-.footer-madeby{
-	font-size: 0.9375rem;
+.footer-madeby, .footer-copyrights{
+	font-size: clamp(0.8rem, 2vw,1.125rem);
 }
 
 .footer-madeby span {
@@ -707,6 +711,7 @@ input::placeholder, textarea::placeholder{
 
 	.nav__hamburger{
 		display: flex;
+		cursor: pointer;
 	}
 
 
@@ -716,21 +721,18 @@ input::placeholder, textarea::placeholder{
 	}
 
 	.nav__hamburger.active span:nth-child(1) {
-		cursor: pointer;
 		transform-origin: 50%;
 		transform: translateY(10px) rotateZ(45deg);
 
 	}
 
 	.nav__hamburger.active span:nth-child(3) {
-		cursor: pointer;
 		transform-origin: 50%;
 		transform: translateY(-10px) rotateZ(-45deg);
 
 	}
 
 	.nav__hamburger.active span:nth-child(2) {
-		cursor: pointer;
 		transform-origin: 50%;
 		transform: scale(0);
 
