@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Pacifico';
+	font-style: normal;
+	font-display: swap;
+    font-weight: 400;
+    src: local('Pacifico'), url('https://fonts.cdnfonts.com/s/12846/Pacifico.woff') format('woff');
+}
+
 * {
 	padding: 0;
 	margin: 0;
