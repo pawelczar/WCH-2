@@ -5,6 +5,8 @@ const subscribeForm = document.querySelector('.subscribe__form');
 const header = document.querySelector('.header');
 const menuLinks = document.querySelectorAll('.nav__item > a');
 
+// let scrollY = window.scrollY-60;
+
 console.log(menuLinks);
 
 const prevSubmit = function (e){
@@ -17,6 +19,9 @@ const activeToggle = function () {
     if(!navBar.classList.contains('active')) {
         navBar.classList.add('active');
     }
+    console.log('click');
+    prevSubmit();
+    window.scrollBy(0,-60);
 }
 
 document.addEventListener('scroll', function(){
