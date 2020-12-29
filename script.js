@@ -5,10 +5,6 @@ const subscribeForm = document.querySelector('.subscribe__form');
 const header = document.querySelector('.header');
 const menuLinks = document.querySelectorAll('.nav__item > a');
 
-// let scrollY = window.scrollY-60;
-
-console.log(menuLinks);
-
 const prevSubmit = function (e){
     e.preventDefault();
 }
@@ -20,7 +16,6 @@ const activeToggle = function () {
         navBar.classList.add('active');
     }
     console.log('click');
-    prevSubmit();
     window.scrollBy(0,-60);
 }
 
@@ -39,5 +34,6 @@ hamburger.addEventListener('click', activeToggle);
 
 for( let i = 0; i < menuLinks.length; i++){
     menuLinks[i].addEventListener('click', activeToggle);
+    menuLinks[i].addEventListener('click', (e)=> e.preventDefault());
 }
 
