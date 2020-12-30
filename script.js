@@ -32,18 +32,37 @@ const activeToggle = function () {
     }
 }
 
+const scrollToPos = function (link) {
+        console.log(link);
+         const scrollVal =(link.offsetTop)-60;
+         console.log(scrollVal);
+         window.scrollTo(0, scrollVal);
+}
+
 const menuSelection = function (e) {
     e.preventDefault();
     let link = e.target.innerText.toLowerCase();
-    console.log(link);
     switch(link){
-        case 'contact': 
-            console.log(contact);
-            const scroll = contact.offsetTop;
-            console.log(scroll);
-            window.scrollTo(0, scroll);
-            window.scrollBy(0,-60);
+        case 'home':
+            scrollToPos(header);
             break;
+        case 'about':
+            scrollToPos(about);
+            break;
+        case 'services':
+            scrollToPos(services);
+            break;
+        case 'gallery':
+            scrollToPos(gallery);
+            break;
+        case 'subscribe':
+            scrollToPos(subscribe);
+            break;
+        case 'blog':
+            scrollToPos(blog);
+            break;
+        case 'contact': 
+            scrollToPos(contact);
         default:
             console.log("default case from switch");
     }
