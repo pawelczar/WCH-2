@@ -11,13 +11,18 @@ const navBar = document.querySelector('.nav');
 const menu = document.querySelector('.nav__menu');
 const subscribeForm = document.querySelector('.subscribe__form');
 const header = document.querySelector('.header');
+const menuItems = document.querySelectorAll('.nav__item');
 const menuLinks = document.querySelectorAll('.nav__item > a');
+
+
+let scrollPos;
+console.log(menuLinks[0]);
 
 const prevSubmit = function (e){
     e.preventDefault();
 }
 
-const activeToggle = function () {
+const menuToggle = function () {
     hamburger.classList.toggle('active');
     menu.classList.toggle('active');
     if(!navBar.classList.contains('active')) {
@@ -59,8 +64,33 @@ const menuSelection = function (e) {
         default:
             console.log("default case from switch");
     }
-    activeToggle();
+    menuToggle();
 }
+
+const removeActiveClass = () => {
+    for(item of menuLinks){
+        if(item.classList.contains('active')){
+            item.classList.remove('active');
+        }
+    }
+}
+
+const getScrollPos = () =>{
+    scrollPos = scrollY;
+    if(scrollPos < header.offsetHeight){
+        let current = menuLinks[0].classList.add("active");
+        for (let i=0; i<menuLinks.length-1; i++){
+            menuLinks[i].classList.remove("active");
+        }
+    }else if (scrollPos>=about.offsetHeight){
+        menuLinks[1].classList.add("active");
+        for (let i=2; i<menuLinks.length-1; i++){
+            menuLinks[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener('scroll', getScrollPos);
 
 document.addEventListener('scroll', function(){
     if (window.scrollY < 71) {
@@ -72,7 +102,7 @@ document.addEventListener('scroll', function(){
     }
 });
 
-hamburger.addEventListener('click', activeToggle);
+hamburger.addEventListener('click', menuToggle);
 
 for( let i = 0; i < menuLinks.length; i++){
     menuLinks[i].addEventListener('click', menuSelection);
