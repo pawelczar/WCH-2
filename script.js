@@ -13,13 +13,6 @@ const subscribeForm = document.querySelector('.subscribe__form');
 const header = document.querySelector('.header');
 const menuLinks = document.querySelectorAll('.nav__item > a');
 
-// console.log(menuLinks);
-// for(atr of menuLinks) {
-//     atr.href = "";
-//     console.log(atr);
-// }
-
-
 const prevSubmit = function (e){
     e.preventDefault();
 }

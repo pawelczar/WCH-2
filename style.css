@@ -76,7 +76,7 @@
 	margin-left: 2vw;
 }
 
-.nav__item:hover {
+.nav__item:hover, .nav__item.active {
 	border-top: 3px solid orangered;
 }
 
