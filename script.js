@@ -79,7 +79,4 @@ for( let i = 0; i < menuLinks.length; i++){
 }
 
 subscribeForm.addEventListener('submit',prevSubmit);
-function newFunction() {
-    contact.scrollIntoView();
-}
 
