@@ -16,7 +16,6 @@ const menuLinks = document.querySelectorAll('.nav__item > a');
 
 
 let scrollPos;
-console.log(menuLinks[0]);
 
 const prevSubmit = function (e){
     e.preventDefault();
@@ -31,9 +30,7 @@ const menuToggle = function () {
 }
 
 const scrollToPos = function (link) {
-        console.log(link);
          const scrollVal =(link.offsetTop)-60;
-         console.log(scrollVal);
          window.scrollTo(0, scrollVal);
 }
 
@@ -84,7 +81,6 @@ const getScrollPos = () =>{
         removeActiveClass(current);
     }else if (scrollPos<=header.offsetHeight+about.offsetTop-80){ //ABOUT US
         current = menuLinks[1];
-        console.log(current);
         removeActiveClass(current);
     }else if (scrollPos<=services.offsetHeight+services.offsetTop-80){ //SERVICES
         current = menuLinks[2];
