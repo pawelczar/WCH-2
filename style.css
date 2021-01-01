@@ -76,7 +76,7 @@
 	margin-left: 2vw;
 }
 
-.nav__item:hover {
+.nav__item:hover, .nav__item.active {
 	border-top: 3px solid orangered;
 }
 
@@ -394,7 +394,6 @@
  	width: 170px;
 	height: 55px;
 	background-color: var(--color-green);
-
 }
 
 .button--green:hover{
@@ -408,7 +407,6 @@
 	width: 1px;
 	height: 1px;
 	clip: rect(0,0,0,0);
-	
 }
 
 /************** BLOG SECTION *******************/
@@ -427,7 +425,6 @@
 	font-family: 'Raleway';
 	font-size: 5.625rem;
 	font-weight: bold;
-
 }
 
 .blog__description{
@@ -445,8 +442,6 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 1.875rem;
-
-
 }
 
 .card{
@@ -516,7 +511,6 @@
 	bottom: 5%;
 	font-size: 0.8125rem;
 	font-weight: 200;
-	
 }
 
 .button--red{
@@ -544,7 +538,6 @@
 	margin: 0 auto;
 	margin-bottom: 22px;
 	text-align: center;
-	
 }
 
 .conctact__description{
@@ -665,7 +658,6 @@ input::placeholder, textarea::placeholder{
 		height: 60px;
 		justify-content: space-between;
 		padding: 0 max(10px, 5vw);
-		
 	}
 	
 	.nav__menu{
@@ -683,8 +675,6 @@ input::placeholder, textarea::placeholder{
 		transform-origin: top;
 		transform: scaleY(0);
 		transition: transform 0.4s ease;
-		
-		
 	}
 
 	.nav__menu.active{
@@ -701,20 +691,19 @@ input::placeholder, textarea::placeholder{
 		margin: 0 auto;
 		flex: 1 0 auto;
 		border-color: transparent;
+		text-align: center;
 		}
 	
 	.nav__item a{
-		padding-top: 7px;
-		border-top: 3px solid transparent;
+		padding: 7px;
+		width: 100%;
+		color: inherit;
 	}
 
-	.nav__item:hover{
-		border-color: transparent;
+	.nav__item:hover, .nav__item.active{
+		background-color: #ff6033;
+		color: #fff;
 
-	}
-
-	.nav__item:hover a, .nav__item a.active{
-		border-top: 3px solid orangered;
 	}
 
 	.nav__hamburger{

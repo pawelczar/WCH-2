@@ -67,7 +67,7 @@ const menuSelection = function (e) {
 
 const removeActiveClass = (current) => {
     current.classList.add('active');
-    for(item of menuLinks){
+    for(item of menuItems){
         if(item.classList.contains('active') && item !== current){
             item.classList.remove('active');
         }
@@ -78,30 +78,28 @@ const getScrollPos = () =>{
     scrollPos = scrollY;
     let current;
     if(scrollPos <= header.offsetHeight - MENU_HEIGHT){ //HOME
-        current = menuLinks[0]; 
+        current = menuItems[0]; 
         removeActiveClass(current);
     }else if (scrollPos<=header.offsetHeight+about.offsetTop - MENU_HEIGHT){ //ABOUT US
-        current = menuLinks[1];
+        current = menuItems[1];
         removeActiveClass(current);
     }else if (scrollPos<=services.offsetHeight+services.offsetTop - MENU_HEIGHT){ //SERVICES
-        current = menuLinks[2];
+        current = menuItems[2];
         removeActiveClass(current);
     }else if (scrollPos<=gallery.offsetHeight + gallery.offsetTop - MENU_HEIGHT){ //GALLERY
-        current = menuLinks[3];
+        current = menuItems[3];
         removeActiveClass(current);
     }else if (scrollPos<=subscribe.offsetHeight + subscribe.offsetTop - MENU_HEIGHT){ //  // SUBSCRIBE
-        current = menuLinks[4];
+        current = menuItems[4];
         removeActiveClass(current);
     }else if (scrollPos<=blog.offsetHeight + blog.offsetTop - MENU_HEIGHT){ //BLOG
-        current = menuLinks[5];
+        current = menuItems[5];
         removeActiveClass(current);
     }else{
-        current = menuLinks[6];
+        current = menuItems[6];
         removeActiveClass(current);
     }
 }
-
-
 
 window.addEventListener('scroll', function(){
     getScrollPos();
