@@ -67,9 +67,10 @@ const menuSelection = function (e) {
     menuToggle();
 }
 
-const removeActiveClass = () => {
+const removeActiveClass = (current) => {
+    current.classList.add('active');
     for(item of menuLinks){
-        if(item.classList.contains('active')){
+        if(item.classList.contains('active') && item !== current){
             item.classList.remove('active');
         }
     }
@@ -77,22 +78,36 @@ const removeActiveClass = () => {
 
 const getScrollPos = () =>{
     scrollPos = scrollY;
-    if(scrollPos < header.offsetHeight){
-        let current = menuLinks[0].classList.add("active");
-        for (let i=0; i<menuLinks.length-1; i++){
-            menuLinks[i].classList.remove("active");
-        }
-    }else if (scrollPos>=about.offsetHeight){
-        menuLinks[1].classList.add("active");
-        for (let i=2; i<menuLinks.length-1; i++){
-            menuLinks[i].classList.remove("active");
-        }
+    let current;
+    if(scrollPos <= header.offsetHeight-80){ //HOME
+        current = menuLinks[0]; 
+        removeActiveClass(current);
+    }else if (scrollPos<=header.offsetHeight+about.offsetTop-80){ //ABOUT US
+        current = menuLinks[1];
+        console.log(current);
+        removeActiveClass(current);
+    }else if (scrollPos<=services.offsetHeight+services.offsetTop-80){ //SERVICES
+        current = menuLinks[2];
+        removeActiveClass(current);
+    }else if (scrollPos<=gallery.offsetHeight + gallery.offsetTop - 80){ //GALLERY
+        current = menuLinks[3];
+        removeActiveClass(current);
+    }else if (scrollPos<=subscribe.offsetHeight + subscribe.offsetTop - 80){ //  // SUBSCRIBE
+        current = menuLinks[4];
+        removeActiveClass(current);
+    }else if (scrollPos<=blog.offsetHeight + blog.offsetTop - 80){ //BLOG
+        current = menuLinks[5];
+        removeActiveClass(current);
+    }else{
+        current = menuLinks[6];
+        removeActiveClass(current);
     }
 }
 
-window.addEventListener('scroll', getScrollPos);
 
-document.addEventListener('scroll', function(){
+
+window.addEventListener('scroll', function(){
+    getScrollPos();
     if (window.scrollY < 71) {
         navBar.classList.remove('active');
     }
