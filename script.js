@@ -5,6 +5,8 @@ const gallery = document.querySelector('.gallery');
 const subscribe = document.querySelector('.subscribe');
 const blog = document.querySelector('.blog');
 const contact = document.querySelector('.contact');
+const html = document.querySelector('html')
+
 
 const hamburger = document.querySelector('.nav__hamburger');
 const navBar = document.querySelector('.nav');
@@ -17,6 +19,8 @@ const menuLinks = document.querySelectorAll('.nav__item > a');
 const MENU_HEIGHT = 80;
 
 let scrollPos;
+let previousScroll = 0;;
+let menuBarPos = 0;;
 
 const prevSubmit = function (e){
     e.preventDefault();
@@ -103,12 +107,28 @@ const getScrollPos = () =>{
 
 window.addEventListener('scroll', function(){
     getScrollPos();
+    console.log("previousScroll:", previousScroll);
+    console.log("current:", window.scrollY);
     if (window.scrollY < 71) {
         navBar.classList.remove('active');
+        previousScroll = window.scrollY;
     }
     else
-    {
+    {   
         navBar.classList.add('active');
+        if(window.scrollY >= previousScroll && menuBarPos > (-80)){
+            navBar.style.cssText = `top: ${menuBarPos}px;`;
+            console.log(menuBarPos);
+            menuBarPos -= 4;
+            previousScroll = window.scrollY;
+        }else if(menuBarPos < 0){
+            menuBarPos += 4;
+            navBar.style.cssText = `top: ${menuBarPos}px;`;
+            console.log(menuBarPos);
+            previousScroll = window.scrollY;
+        }
+
+
     }
 });
 
