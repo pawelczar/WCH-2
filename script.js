@@ -107,8 +107,6 @@ const getScrollPos = () =>{
 
 window.addEventListener('scroll', function(){
     getScrollPos();
-    console.log("previousScroll:", previousScroll);
-    console.log("current:", window.scrollY);
     if (window.scrollY < 71) {
         navBar.classList.remove('active');
         previousScroll = window.scrollY;
@@ -118,17 +116,13 @@ window.addEventListener('scroll', function(){
         navBar.classList.add('active');
         if(window.scrollY >= previousScroll && menuBarPos > (-80)){
             navBar.style.cssText = `top: ${menuBarPos}px;`;
-            console.log(menuBarPos);
             menuBarPos -= 4;
             previousScroll = window.scrollY;
         }else if(menuBarPos < 0){
             menuBarPos += 4;
             navBar.style.cssText = `top: ${menuBarPos}px;`;
-            console.log(menuBarPos);
             previousScroll = window.scrollY;
         }
-
-
     }
 });
 
