@@ -99,13 +99,8 @@
 	background-color: var(--bgcolor-header);
 }
 
-.header__content{
-	top: 50%;
-	transform: translateY(50%);
-}
 
 /*************MOBILE MENU***********************/
-
 
 
 .nav__hamburger {
@@ -129,8 +124,11 @@
 /* HEADER CONTENT */
 
 .header__content {
+	position: relative;
 	width: 370px;
+	transform: translateY(-50%);
 	top: 50%;
+	margin-bottom: 100px;
 }
 
 .info__title {
@@ -821,9 +819,6 @@
 
 
 @media screen and (max-width:429px){
-	.header__content{
-		transform: translateY(20%);
-	}
 
 	.contact__title, .gallery__title{
 		font-size: 4.25rem;
