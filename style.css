@@ -390,6 +390,10 @@
 	margin-bottom: 10px;
 }
 
+.form__intput::placeholder{
+	color:#262626;
+}
+
 .button--green{
  	width: 170px;
 	height: 55px;
@@ -583,11 +587,12 @@
 	height: 250px;
 	resize: none;
 }
-input::placeholder, textarea::placeholder{
+.contact__input::placeholder{
 	font-family: 'Raleway';
 	font-size: 0.9375rem;
 	color: var(--color-bright);
 }
+
 .contact__adress{
 	line-height: 1.5625rem;
 }
