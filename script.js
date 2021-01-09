@@ -114,13 +114,11 @@ window.addEventListener('scroll', function(){
     else
     {   
         navBar.classList.add('active');
-        if(window.scrollY >= previousScroll && menuBarPos > (-80)){
-            navBar.style.cssText = `top: ${menuBarPos}px;`;
-            menuBarPos -= 4;
+                if(window.scrollY >= previousScroll){
+            navBar.classList.add('slideIn');
             previousScroll = window.scrollY;
-        }else if(menuBarPos < 0){
-            menuBarPos += 4;
-            navBar.style.cssText = `top: ${menuBarPos}px;`;
+        }else{
+            navBar.classList.remove('slideIn');
             previousScroll = window.scrollY;
         }
     }

@@ -46,11 +46,16 @@
 	justify-content: space-around;
 	align-items: center;
 	z-index: 9999;
+	transition: all 0.3s ease-in-out ;
 }
 
 .nav.active{
 	background-color: #fff;
 	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.nav.slideIn{
+	transform: translateY(-80px);
 }
 
 .nav__logo a {
