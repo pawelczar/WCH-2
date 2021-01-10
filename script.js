@@ -111,31 +111,6 @@ const getScrollPos = () =>{
         current = menuItems[6];
         removeActiveClass(current);
     }
-    
-    // scrollPos = scrollY;
-    // let current;
-    // if(scrollPos <= header.offsetHeight - MENU_HEIGHT){ //HOME
-    //     current = menuItems[0]; 
-    //     removeActiveClass(current);
-    // }else if (scrollPos<=header.offsetHeight+about.offsetTop - MENU_HEIGHT){ //ABOUT US
-    //     current = menuItems[1];
-    //     removeActiveClass(current);
-    // }else if (scrollPos<=services.offsetHeight+services.offsetTop - MENU_HEIGHT){ //SERVICES
-    //     current = menuItems[2];
-    //     removeActiveClass(current);
-    // }else if (scrollPos<=gallery.offsetHeight + gallery.offsetTop - MENU_HEIGHT){ //GALLERY
-    //     current = menuItems[3];
-    //     removeActiveClass(current);
-    // }else if (scrollPos<=subscribe.offsetHeight + subscribe.offsetTop - MENU_HEIGHT){ //  // SUBSCRIBE
-    //     current = menuItems[4];
-    //     removeActiveClass(current);
-    // }else if (scrollPos<=blog.offsetHeight + blog.offsetTop - MENU_HEIGHT){ //BLOG
-    //     current = menuItems[5];
-    //     removeActiveClass(current);
-    // }else{
-    //     current = menuItems[6];
-    //     removeActiveClass(current);
-    // }
 }
 
 window.addEventListener('scroll', function(){
