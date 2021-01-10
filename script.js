@@ -5,8 +5,7 @@ const gallery = document.querySelector('.gallery');
 const subscribe = document.querySelector('.subscribe');
 const blog = document.querySelector('.blog');
 const contact = document.querySelector('.contact');
-const html = document.querySelector('html')
-
+const html = document.querySelector('html');
 
 const hamburger = document.querySelector('.nav__hamburger');
 const navBar = document.querySelector('.nav');
@@ -74,6 +73,7 @@ const removeActiveClass = (current) => {
     for(item of menuItems){
         if(item.classList.contains('active') && item !== current){
             item.classList.remove('active');
+
         }
     }
 }
@@ -81,28 +81,61 @@ const removeActiveClass = (current) => {
 const getScrollPos = () =>{
     scrollPos = scrollY;
     let current;
-    if(scrollPos <= header.offsetHeight - MENU_HEIGHT){ //HOME
-        current = menuItems[0]; 
+    const homePos = home.getBoundingClientRect();
+    const aboutPos = about.getBoundingClientRect();
+    const servicesPos = services.getBoundingClientRect();
+    const galleryPos = gallery.getBoundingClientRect();
+    const subscribePos = subscribe.getBoundingClientRect();
+    const blogPos = blog.getBoundingClientRect();
+    const contactPos = contact.getBoundingClientRect();
+
+    if (homePos.height/2 <= aboutPos.y){
+        current = menuItems[0];
         removeActiveClass(current);
-    }else if (scrollPos<=header.offsetHeight+about.offsetTop - MENU_HEIGHT){ //ABOUT US
+    }else if(aboutPos.height/2 <= servicesPos.y){
         current = menuItems[1];
         removeActiveClass(current);
-    }else if (scrollPos<=services.offsetHeight+services.offsetTop - MENU_HEIGHT){ //SERVICES
+    }else if(servicesPos.height/2 <= galleryPos.y){
         current = menuItems[2];
         removeActiveClass(current);
-    }else if (scrollPos<=gallery.offsetHeight + gallery.offsetTop - MENU_HEIGHT){ //GALLERY
+    }else if(galleryPos.height/2 <= subscribePos.y){
         current = menuItems[3];
         removeActiveClass(current);
-    }else if (scrollPos<=subscribe.offsetHeight + subscribe.offsetTop - MENU_HEIGHT){ //  // SUBSCRIBE
+    }else if(subscribePos.height/2 <= blogPos.y){
         current = menuItems[4];
         removeActiveClass(current);
-    }else if (scrollPos<=blog.offsetHeight + blog.offsetTop - MENU_HEIGHT){ //BLOG
+    }else if(blogPos.height/2 <= contactPos.y){
         current = menuItems[5];
         removeActiveClass(current);
     }else{
         current = menuItems[6];
         removeActiveClass(current);
     }
+    
+    // scrollPos = scrollY;
+    // let current;
+    // if(scrollPos <= header.offsetHeight - MENU_HEIGHT){ //HOME
+    //     current = menuItems[0]; 
+    //     removeActiveClass(current);
+    // }else if (scrollPos<=header.offsetHeight+about.offsetTop - MENU_HEIGHT){ //ABOUT US
+    //     current = menuItems[1];
+    //     removeActiveClass(current);
+    // }else if (scrollPos<=services.offsetHeight+services.offsetTop - MENU_HEIGHT){ //SERVICES
+    //     current = menuItems[2];
+    //     removeActiveClass(current);
+    // }else if (scrollPos<=gallery.offsetHeight + gallery.offsetTop - MENU_HEIGHT){ //GALLERY
+    //     current = menuItems[3];
+    //     removeActiveClass(current);
+    // }else if (scrollPos<=subscribe.offsetHeight + subscribe.offsetTop - MENU_HEIGHT){ //  // SUBSCRIBE
+    //     current = menuItems[4];
+    //     removeActiveClass(current);
+    // }else if (scrollPos<=blog.offsetHeight + blog.offsetTop - MENU_HEIGHT){ //BLOG
+    //     current = menuItems[5];
+    //     removeActiveClass(current);
+    // }else{
+    //     current = menuItems[6];
+    //     removeActiveClass(current);
+    // }
 }
 
 window.addEventListener('scroll', function(){
