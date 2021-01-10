@@ -215,8 +215,7 @@
 	right: var(--margin-main);
 	transform: translateY(-50%);
 }
-
-.about__info .info__title{
+.info__title{
 	font-size: 5.625rem;
 }
 
@@ -659,6 +658,11 @@
 		padding: 10px;
 		background-color: rgba(0, 177, 176, 0.6);
 	}
+	
+	.subscribe__descrition{
+		padding: 1em;
+		background-color: rgba(255, 255, 255, 0.6);
+		}
 }
 
 @media screen and (max-width:685px){
@@ -717,6 +721,11 @@
 	.nav__hamburger{
 		display: flex;
 		cursor: pointer;
+		padding: 1px;
+	}
+
+	.nav__hamburger.active{
+		padding: 0;
 	}
 
 
@@ -743,6 +752,10 @@
 
 	}
 
+	.button{
+		transform: scale(0.8);
+	}
+
 	.header{
 		padding: max(10px, 5vh);
 		padding-top: 0;
@@ -751,6 +764,11 @@
 
 	.header__content{
 		width: 80%;
+	}
+
+	.icon-scroll{
+		transform: scale(0.8);
+		bottom: 35px;
 	}
 
 	
@@ -801,9 +819,6 @@
 		background:right no-repeat url(img/subscribe.jpg), #fff ;
 	}
 
-	.subscribe__descrition{
-	background-color: rgba(255, 255, 255, 0.6);
-	}
 	
 	.form__intput{
 		width: 100%;
@@ -816,7 +831,7 @@
 		flex-direction: column;
 	}
 
-	.contact__form{
+	.contact__form, .contact__adress{
 		margin: 0 auto;
 		width: 90%;
 	}
@@ -825,7 +840,7 @@
 
 @media screen and (max-width:429px){
 
-	.contact__title, .gallery__title{
+	.info__title, .contact__title, .gallery__title{
 		font-size: 4.25rem;
 	}
 
