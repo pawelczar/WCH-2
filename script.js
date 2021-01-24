@@ -15,11 +15,8 @@ const header = document.querySelector('.header');
 const menuItems = document.querySelectorAll('.nav__item');
 const menuLinks = document.querySelectorAll('.nav__item > a');
 
-const MENU_HEIGHT = 80;
-
 let scrollPos;
 let previousScroll = 0;;
-let menuBarPos = 0;;
 
 const prevSubmit = function (e){
     e.preventDefault();
@@ -34,8 +31,12 @@ const menuToggle = function () {
 }
 
 const scrollToPos = function (link) {
-         const scrollVal =(link.offsetTop)-60;
-         window.scrollTo(0, scrollVal);
+         const scrollVal =(link.offsetTop);
+         if (scrollVal < scrollY){
+             window.scrollTo(0, (scrollVal-60));
+            }else{
+             window.scrollTo(0, (scrollVal));
+         }
 }
 
 const menuSelection = function (e) {
