@@ -16,7 +16,10 @@ const menuItems = document.querySelectorAll('.nav__item');
 const menuLinks = document.querySelectorAll('.nav__item > a');
 
 let scrollPos;
-let previousScroll = 0;;
+let previousScroll = 0;
+
+const SCROLL_OFFSET = 60;
+const MENU_BAR_OFFSET = 71;
 
 const prevSubmit = function (e){
     e.preventDefault();
@@ -31,12 +34,12 @@ const menuToggle = function () {
 }
 
 const scrollToPos = function (link) {
-         const scrollVal =(link.offsetTop);
-         if (scrollVal < scrollY){
-             window.scrollTo(0, (scrollVal-60));
-            }else{
-             window.scrollTo(0, (scrollVal));
-         }
+    const scrollVal =(link.offsetTop);
+    if (scrollVal < scrollY){
+            window.scrollTo(0, (scrollVal - SCROLL_OFFSET));
+        }else{
+            window.scrollTo(0, (scrollVal));
+            }
 }
 
 const menuSelection = function (e) {
@@ -116,7 +119,7 @@ const getScrollPos = () =>{
 
 window.addEventListener('scroll', function(){
     getScrollPos();
-    if (window.scrollY < 71) {
+    if (window.scrollY < MENU_BAR_OFFSET) {
         navBar.classList.remove('active');
         previousScroll = window.scrollY;
     }
