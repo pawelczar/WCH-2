@@ -11,7 +11,6 @@ const hamburger = document.querySelector('.nav__hamburger');
 const navBar = document.querySelector('.nav');
 const menu = document.querySelector('.nav__menu');
 const subscribeForm = document.querySelector('.subscribe__form');
-const header = document.querySelector('.header');
 const menuItems = document.querySelectorAll('.nav__item');
 const menuLinks = document.querySelectorAll('.nav__item > a');
 
@@ -21,11 +20,11 @@ let previousScroll = 0;
 const SCROLL_OFFSET = 60;
 const MENU_BAR_OFFSET = 71;
 
-const prevSubmit = function (e){
+const handleSubmit = function (e){
     e.preventDefault();
 }
 
-const menuToggle = function () {
+const toggleMenu = function () {
     hamburger.classList.toggle('active');
     menu.classList.toggle('active');
     if(!navBar.classList.contains('active')) {
@@ -34,7 +33,10 @@ const menuToggle = function () {
 }
 
 const scrollToPos = function (link) {
-    const scrollVal =(link.offsetTop);
+    console.log(link)
+    let menuTarget = document.getElementById(`${link}`);
+    console.log(menuTarget);
+    const scrollVal =(menuTarget.offsetTop);
     if (scrollVal < scrollY){
             window.scrollTo(0, (scrollVal - SCROLL_OFFSET));
         }else{
@@ -44,32 +46,36 @@ const scrollToPos = function (link) {
 
 const menuSelection = function (e) {
     e.preventDefault();
-    let link = e.target.innerText.toLowerCase();
-    switch(link){
-        case 'home':
-            scrollToPos(header);
-            break;
-        case 'about':
-            scrollToPos(about);
-            break;
-        case 'services':
-            scrollToPos(services);
-            break;
-        case 'gallery':
-            scrollToPos(gallery);
-            break;
-        case 'subscribe':
-            scrollToPos(subscribe);
-            break;
-        case 'blog':
-            scrollToPos(blog);
-            break;
-        case 'contact': 
-            scrollToPos(contact);
-        default:
-            console.log("default case from switch");
-    }
-    menuToggle();
+    let link = e.target;
+    let id = link.hash
+    scrollToPos(id);
+    // console.log(hash);
+    // let link = e.target.innerText.toLowerCase();
+    // switch(link){
+    //     case 'home':
+    //         scrollToPos(home);
+    //         break;
+    //     case 'about':
+    //         scrollToPos(about);
+    //         break;
+    //     case 'services':
+    //         scrollToPos(services);
+    //         break;
+    //     case 'gallery':
+    //         scrollToPos(gallery);
+    //         break;
+    //     case 'subscribe':
+    //         scrollToPos(subscribe);
+    //         break;
+    //     case 'blog':
+    //         scrollToPos(blog);
+    //         break;
+    //     case 'contact': 
+    //         scrollToPos(contact);
+    //     default:
+    //         console.log("default case from switch");
+    // }
+    toggleMenu();
 }
 
 const removeActiveClass = (current) => {
@@ -136,11 +142,11 @@ window.addEventListener('scroll', function(){
     }
 });
 
-hamburger.addEventListener('click', menuToggle);
+hamburger.addEventListener('click', toggleMenu);
 
 for( let i = 0; i < menuLinks.length; i++){
     menuLinks[i].addEventListener('click', menuSelection);
 }
 
-subscribeForm.addEventListener('submit',prevSubmit);
+subscribeForm.addEventListener('submit',handleSubmit);
 
