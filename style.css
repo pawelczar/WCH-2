@@ -263,7 +263,7 @@
 }
 
 .services__title {
-	font-size: clamp(10px, 7vw, 5.625rem);
+	font-size: clamp(30px, 8vw, 5.625rem);
 	color: var(--color-bright);
 	margin-left: 65px;
 }
@@ -656,6 +656,7 @@
 @media screen and (max-width: 1230px) {
 	.about__info {
 		position: relative;
+		max-width: 80vw;
 		color: var(--color-bright);
 		margin: 0 auto;
 		text-shadow: none;
@@ -665,6 +666,20 @@
 	.subscribe__descrition {
 		padding: 1em;
 		background-color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+@media screen and (max-width: 755px) {
+	.services {
+		flex-direction: column;
+		justify-content: center;
+		background-position: center;
+		background-size: 75%;
+	}
+	.services__title {
+		margin-left: 0;
+		order: -1;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -755,6 +770,11 @@
 		transform: scale(0.8);
 	}
 
+	.button--green {
+		display: block;
+		margin: 0 auto;
+	}
+
 	.header {
 		padding: max(10px, 5vh);
 		padding-top: 0;
@@ -772,20 +792,12 @@
 
 	.services {
 		height: auto;
-		flex-direction: column;
 		padding: max(10px, 5vh);
-		background-size: 60%;
-		background-position: center;
 	}
 
 	.list__item {
 		width: 60vw;
 		height: 70px;
-	}
-
-	.services__title {
-		margin-left: 0;
-		order: -1;
 	}
 
 	/************* GALLERY ********************/
@@ -846,5 +858,23 @@
 
 	.button--red {
 		margin-bottom: 50px;
+	}
+
+	.list__item {
+		height: 50px;
+	}
+
+	.list__icon img {
+		width: 35px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.list__item {
+		width: 70vw;
+	}
+
+	.list__item:nth-child(3) .list__description {
+		font-size: 15px;
 	}
 }

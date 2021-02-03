@@ -70,6 +70,7 @@ const getScrollPos = () => {
   const blogPos = blog.getBoundingClientRect();
   const contactPos = contact.getBoundingClientRect();
 
+
   if (homePos.height / 2 <= aboutPos.y) {
     current = menuItems[0];
     removeActiveClass(current);
